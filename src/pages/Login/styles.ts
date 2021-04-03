@@ -35,3 +35,17 @@ export const LoginText = styled.Text`
   color: #fff;
   margin-top: 16px;
 `;
+
+export const InputsWrapper = styled.View`
+  height: 120px;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 24px;
+`;
+
+export const ForgotPassword = styled.Text`
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 26px;
+  text-align: right;
+`;
