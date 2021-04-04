@@ -11,13 +11,15 @@ import {
   ForgotPassword,
 } from './styles';
 
+import { TouchableOpacity } from 'react-native';
+
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 import LogoPNG from '../../assets/images/logo.png';
 import iconsHelper from '../../components/Icons/iconsHelper';
 
-const Login: React.FC = () => {
+const Login: React.FC = ({ navigation }) => {
   return (
     <Container>
       <Logo source={LogoPNG} defaultSource={LogoPNG} />
@@ -29,9 +31,17 @@ const Login: React.FC = () => {
 
       <InputsWrapper>
         <Input icon={iconsHelper.user} placeholder="CPF" />
-        <Input icon={iconsHelper.lockKey} placeholder="Senha" />
+        <Input
+          textContentType="password"
+          icon={iconsHelper.lockKey}
+          placeholder="Senha"
+        />
       </InputsWrapper>
-      <ForgotPassword>Esqueci minha senha</ForgotPassword>
+
+      <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
+        <ForgotPassword>Esqueci minha senha</ForgotPassword>
+      </TouchableOpacity>
+
       <Button>Entrar</Button>
     </Container>
   );
