@@ -1,6 +1,10 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
-export const Container = styled.View`
+interface ContainerProps {
+  iconDirection: string;
+}
+
+export const Container = styled.View<ContainerProps>`
   width: 100%;
   height: 56px;
   border-radius: 4px;
@@ -9,6 +13,12 @@ export const Container = styled.View`
   padding: 0 20px 0 20px;
   align-items: center;
   justify-content: center;
+
+  ${props =>
+    props.iconDirection === 'right' &&
+    css`
+      flex-direction: row-reverse;
+    `}
 `;
 
 export const TextInput = styled.TextInput`

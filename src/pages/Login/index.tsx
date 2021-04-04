@@ -42,7 +42,9 @@ const Login: React.FC = ({ navigation }) => {
         <ForgotPassword>Esqueci minha senha</ForgotPassword>
       </TouchableOpacity>
 
-      <Button>Entrar</Button>
+      <TouchableOpacity onPress={() => navigation.push('Dashboard')}>
+        <Button>Entrar</Button>
+      </TouchableOpacity>
     </Container>
   );
 };
