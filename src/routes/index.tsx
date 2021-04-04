@@ -2,6 +2,8 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
+import { StatusBar } from 'react-native';
+
 import { Container } from './styles';
 
 import Login from '../pages/Login';
@@ -14,6 +16,7 @@ const Routes: React.FC = () => {
   return (
     <Container>
       <NavigationContainer>
+        <StatusBar barStyle="light-content" />
         <Stack.Navigator headerMode={'none'}>
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Dashboard" component={Dashboard} />

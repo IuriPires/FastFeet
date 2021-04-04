@@ -5,7 +5,7 @@ export const Container = styled.View`
   width: 100%;
   background-color: #4c33cc;
   padding: 24px;
-  position: relative;
+  z-index: 2;
 `;
 
 export const UserNameWrapper = styled.View`
