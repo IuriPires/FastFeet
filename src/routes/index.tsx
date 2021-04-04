@@ -9,6 +9,7 @@ import { Container } from './styles';
 import Login from '../pages/Login';
 import ForgotPassword from '../pages/ForgotPassword';
 import Dashboard from '../pages/Dashboard';
+import Details from '../pages/Details';
 
 const Routes: React.FC = () => {
   const Stack = createStackNavigator();
@@ -20,6 +21,7 @@ const Routes: React.FC = () => {
         <Stack.Navigator headerMode={'none'}>
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
+          <Stack.Screen name="Details" component={Details} />
           <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         </Stack.Navigator>
       </NavigationContainer>

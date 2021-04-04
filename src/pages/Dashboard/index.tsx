@@ -34,6 +34,7 @@ const Dashboard: React.FC = ({ navigation }) => {
       <PackageCard
         packageDate={item.packageDate}
         packageName={item.packageName}
+        navigation={navigation}
       />
     );
   };
